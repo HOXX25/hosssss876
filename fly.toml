@@ -1,19 +1,29 @@
-app = "sys-bot-panl"
-primary_region = "iad"
+# fly.toml app configuration file generated for hosssss876 on 2026-11-10T15:57:09Z
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = 'hosssss876'
+primary_region = 'ams'
 
 [build]
-
 [env]
-  NODE_ENV = "production"
-  PANEL_API_PORT = "8000"
+  NODE_ENV = 'production'
+  PANEL_API_PORT = '8000'
 
-# This is primarily a Discord bot worker. The internal HTTP API on port 8000
-# is intended for panel key validation (originally localhost-based) and may not
-# be reachable the same way when hosted remotely.
 [processes]
-  app = "node src/index.js"
+  app = 'node src/index.js'
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-  memory = "256mb"
-  cpu_kind = "shared"
+  memory = '256mb'
+  cpu_kind = 'shared'
   cpus = 1
+  memory_mb = 256
