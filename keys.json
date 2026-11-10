@@ -1,0 +1,30 @@
+{
+  "keys": [
+    {
+      "key": "HOLICS-740B0FFA",
+      "createdAt": "2026-11-10T15:23:51.092Z",
+      "expiresAt": "2026-11-11T15:23:51.092Z",
+      "used": true,
+      "usedAt": "2026-11-10T15:23:59.223Z",
+      "revoked": true,
+      "banned": true,
+      "source": "freepanel",
+      "boundHwid": "375642E189D92053",
+      "boundAt": "2026-11-10T15:23:59.223Z"
+    },
+    {
+      "key": "HOLICS-8AE2ABE0",
+      "createdAt": "2026-11-10T15:30:22.339Z",
+      "expiresAt": "2026-11-11T15:30:22.339Z",
+      "used": true,
+      "usedAt": "2026-11-10T15:30:35.097Z",
+      "revoked": false,
+      "banned": false,
+      "source": "freepanel",
+      "boundHwid": "375642E189D92053",
+      "boundAt": "2026-11-10T15:30:35.097Z"
+    }
+  ],
+  "claims": [],
+  "freePanelEnabled": true
+}

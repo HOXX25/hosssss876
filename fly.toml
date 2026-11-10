@@ -1,0 +1,19 @@
+app = "sys-bot-panl"
+primary_region = "iad"
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+  PANEL_API_PORT = "8000"
+
+# This is primarily a Discord bot worker. The internal HTTP API on port 8000
+# is intended for panel key validation (originally localhost-based) and may not
+# be reachable the same way when hosted remotely.
+[processes]
+  app = "node src/index.js"
+
+[[vm]]
+  memory = "256mb"
+  cpu_kind = "shared"
+  cpus = 1
